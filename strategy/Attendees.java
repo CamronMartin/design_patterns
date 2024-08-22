@@ -1,6 +1,7 @@
 package strategy;
 
 import java.util.List;
+import java.util.ArrayList;
 
 public class Attendees {
 
@@ -10,10 +11,20 @@ public class Attendees {
 
     public Attendees(String title) {
         this.title = title;
+        people = new ArrayList<Person>();
+        this.searchBehavior = new LinearSearch();
     }// Ending bracket of constructor
 
     public Person add(String firstName, String lastName, String phoneNumber, String reminder) {
-        return new Person(firstName, lastName, phoneNumber, reminder);
+        Person p = new Person(firstName, lastName, phoneNumber, reminder);
+
+        if(searchBehavior.contains(people, p)) {
+            return null;
+        } else {
+            people.add(p);
+            return p;
+        }// Ending bracket of if-else
+        
     }// Ending bracket of method add()
 
     public String getTitle() {
