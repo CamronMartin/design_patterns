@@ -3,12 +3,20 @@ package strategy;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * A class that will perfrom a binary search.
+ * @author Camron Martin
+ */
 public class BinarySearch implements SearchBehavior{
 
     int lowerBound;
     int middleBound;
     int upperBound;
 
+    /**
+     * This is a method that will perform a binary search on the guests of people
+     * in order to find a specific person.
+     */
     public boolean contains(List<Person> people, Person person) {
 
         Collections.sort(people);

@@ -4,6 +4,7 @@ package strategy;
  * Creates a new Person
  */
 public class Person implements Comparable<Person>{
+
     private String firstName;
     private String lastName;
     private String phoneNumber;
@@ -70,6 +71,7 @@ public class Person implements Comparable<Person>{
      */
     @Override
     public int compareTo(Person person) {
+        
         if(lastName.compareTo(person.getLastName()) > 0) {
             return 1;
         } else if(lastName.compareTo(person.getLastName()) < 0){
