@@ -25,7 +25,7 @@ public class Book {
      * This will return the genre of the book
      * @return genre
      */
-    public Genre getGentre() {
+    public Genre getGenre() {
         return this.genre;
     }
     
@@ -53,10 +53,15 @@ public class Book {
         return this.description;
     }
 
+    /**
+     * This method will return a String representation of the book
+     */
     @Override
     public String toString(){
         StringBuilder sb = new StringBuilder();
-        sb.append("---- " + this.getTitle() + "----");
+        sb.append("---- " + this.getTitle() + "----\n");
+        sb.append(this.getGenre() + " by: " + this.getAuthorFirstName() + " " + this.getAuthorLastName() + "\n");
+        sb.append(this.getDescription() + "\n");
         return sb.toString();
     }
     
