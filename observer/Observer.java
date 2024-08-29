@@ -1,5 +1,7 @@
 package observer;
 
-public class Observer {
+public interface Observer {
+    
+    public void update(Book book);
     
 }
