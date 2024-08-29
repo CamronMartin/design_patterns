@@ -31,6 +31,11 @@ public class FanReads implements Observer{
     }
 
 
+    /**
+     * This will updated the recommendations list, and will add
+     * a book to the ArrayList of books.
+     * @param Book
+     */
     public void update(Book book) {
 
         Genre genre = book.getGenre();

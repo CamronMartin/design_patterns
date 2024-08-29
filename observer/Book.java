@@ -77,13 +77,14 @@ public class Book {
 
     /**
      * This method will return a String representation of the book
+     * @return a String representation of a book
      */
     @Override
     public String toString(){
         StringBuffer sb = new StringBuffer();
-        sb.append("---- " + this.getTitle() + "----\n");
-        sb.append(this.getGenre() + " by: " + this.getAuthorFirstName() + " " + this.getAuthorLastName() + "\n");
-        sb.append(this.getDescription() + "\n");
+        sb.append("\n---- " + this.getTitle() + "----\n");
+        sb.append(this.getGenre() + " by: " + this.getAuthorFirstName() + " " + this.getAuthorLastName());
+        sb.append(this.getDescription());
         return sb.toString();
     }
     
