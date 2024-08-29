@@ -45,7 +45,8 @@ public class Book {
     public Genre getGenre() {
         return this.genre;
     }
-    
+
+ 
     /**
      * This will return the book author's first name
      * @return authorFirstName of the book
@@ -53,6 +54,8 @@ public class Book {
     public String getAuthorFirstName() {
         return this.authorFirstName;
     }
+
+   
 
     /**
      * This will return the book author's last name
@@ -62,6 +65,7 @@ public class Book {
         return this.authorLastName;
     }
 
+
     /**
      * This will return the description of the book
      * @return description of the book
@@ -69,13 +73,14 @@ public class Book {
     public String getDescription() {
         return this.description;
     }
+    
 
     /**
      * This method will return a String representation of the book
      */
     @Override
     public String toString(){
-        StringBuilder sb = new StringBuilder();
+        StringBuffer sb = new StringBuffer();
         sb.append("---- " + this.getTitle() + "----\n");
         sb.append(this.getGenre() + " by: " + this.getAuthorFirstName() + " " + this.getAuthorLastName() + "\n");
         sb.append(this.getDescription() + "\n");

@@ -31,7 +31,13 @@ public class BestSellers implements Subject{
      */
     public void addBook(String title, Genre genre, String authorFirstname, String authorLastName, String description) {
         Book b = new Book(title, genre, authorFirstname, authorLastName, description);
-        bestSellers.add(b);
+        this.bestSellers.add(b);
+
+        if(this.bestSellers.size() > 5) {
+            this.bestSellers.remove(0);
+        }
+
+        notifyObservers(b);
     }
 
     /**
@@ -45,7 +51,7 @@ public class BestSellers implements Subject{
 
     /**
      * This method will remove any observer
-     * that has been registered
+     * that has been registered.
      * @param Observer 
      */
     public void removeObserver(Observer observer) {
@@ -55,7 +61,7 @@ public class BestSellers implements Subject{
 
     /**
      * This method will notify each registered observer
-     * when an event occurs
+     * when there is a new book.
      * @param Book 
      */
     public void notifyObservers(Book book) {

@@ -2,6 +2,7 @@ package observer;
 
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.List;
 
 /**
  * This class will be an object representation of a Book-Store
@@ -20,7 +21,8 @@ public class Store implements Observer {
      */
     public Store(Subject subject) {
         this.subject = subject;
-        this.bestSellers = new LinkedList<>();
+        this.bestSellers = new LinkedList<Book>();
+        subject.registerObserver(this);
     }
 
     /**
@@ -29,6 +31,9 @@ public class Store implements Observer {
      * @param Book
      */
     public void update(Book book) {
+        if(bestSellers.size() >= 5) {
+            bestSellers.poll();
+        }
         bestSellers.add(book);
     }
 
@@ -36,8 +41,8 @@ public class Store implements Observer {
      * this book will return this best sellers
      * @return linked list of best sellers
      */
-    public LinkedList<Book> getBestSellers() {
-        return (LinkedList<Book>) this.bestSellers;
+    public List<Book> getBestSellers() {
+        return new LinkedList<>(bestSellers);
     }
     
 }
