@@ -9,10 +9,18 @@ import java.util.ArrayList;
  */
 public class BestSellers implements Subject{
     
-    private ArrayList<Book> bestSellers = new ArrayList<>();
-    private ArrayList<Observer> observers = new ArrayList<>();
-    
+    private ArrayList<Book> bestSellers;
+    private ArrayList<Observer> observers;
 
+    /**
+     * This constructor will instantiate two 
+     * new Array Lists for observers, and best sellers.
+     */
+    public BestSellers() {
+        this.bestSellers = new ArrayList<>();
+        this.observers = new ArrayList<>();
+    }
+    
     /**
      * This will add a book to the best sellers collection.
      * @param title of the book

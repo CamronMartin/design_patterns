@@ -12,9 +12,9 @@ public class FanReads implements Observer{
     private Subject subject;
     private HashMap<Genre, ArrayList<Book>> recommendations = new HashMap<>();
 
+    
     public void update(Book book) {
-
-        // TODO: Implement this method
+        
     }
 
     /**
