@@ -7,7 +7,7 @@ import java.util.Queue;
  * This class will be an object representation of a Book-Store
  * @author Camron Martin
  */
-public class Store {
+public class Store implements Observer {
 
     private Subject subject;
     private String title;

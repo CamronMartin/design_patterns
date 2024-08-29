@@ -7,7 +7,7 @@ import java.util.HashMap;
  * This class will be fan recommendations on books.
  * @author Camron Martin
  */
-public class FanReads {
+public class FanReads implements Observer{
     
     private Subject subject;
     private HashMap<Genre, ArrayList<Book>> recommendations = new HashMap<>();
