@@ -14,8 +14,25 @@ public class Book {
 
 
     /**
+     * this constructor will instantiate a new object Book
+     * @param title of the book 
+     * @param genre of the book
+     * @param authorFirstName of the book
+     * @param authorLastName of the book
+     * @param description of the book
+     */
+    public Book(String title, Genre genre, String authorFirstName, String authorLastName, String description) {
+        this.title = title;
+        this.genre = genre;
+        this.authorFirstName = authorFirstName;
+        this.authorLastName = authorLastName;
+        this.description = description;
+    }
+
+
+    /**
      * This will return the title of the book
-     * @return title
+     * @return title of the book
      */
     public String getTitle() {
         return this.title;
@@ -23,7 +40,7 @@ public class Book {
 
     /**
      * This will return the genre of the book
-     * @return genre
+     * @return genre of the book
      */
     public Genre getGenre() {
         return this.genre;
@@ -31,7 +48,7 @@ public class Book {
     
     /**
      * This will return the book author's first name
-     * @return authorFirstName
+     * @return authorFirstName of the book
      */
     public String getAuthorFirstName() {
         return this.authorFirstName;
@@ -39,7 +56,7 @@ public class Book {
 
     /**
      * This will return the book author's last name
-     * @return authorLastName
+     * @return authorLastName of the book
      */
     public String getAuthorLastName() {
         return this.authorLastName;
@@ -47,7 +64,7 @@ public class Book {
 
     /**
      * This will return the description of the book
-     * @return description
+     * @return description of the book
      */
     public String getDescription() {
         return this.description;
