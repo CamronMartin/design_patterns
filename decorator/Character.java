@@ -9,6 +9,11 @@ public class Character {
     private String name;
     protected ArrayList<String> lines;
 
+    public Character(ArrayList<String> lines, String name){
+        this.name = name;
+        lines = new ArrayList<String>();
+    }
+
 
     /**
      * This method will return the name of 
