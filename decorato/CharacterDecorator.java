@@ -1,8 +1,8 @@
-package decorator;
+package decorato;
 
 import java.util.ArrayList;
 
-public class CharacterDecorator extends Character{
+public abstract class CharacterDecorator extends Character{
 
     private Character character;
 
@@ -11,13 +11,10 @@ public class CharacterDecorator extends Character{
      * @param character
      */
     public CharacterDecorator(Character character) {
+        super(new ArrayList<>(), character.getName());
         this.character = character;
     }
 
-    protected void integrateDecor(ArrayList<String> decor) {
-        for(String d : decor) {
-            lines.add(d);
-        }
-    }
+    protected abstract void integrateDecor(ArrayList<String> decor);
     
 }

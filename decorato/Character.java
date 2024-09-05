@@ -1,19 +1,20 @@
+package decorato;
+
 import java.util.ArrayList;
 
 /**
  * This class will be used to instantiate a character
  * @author Camron Martin
  */
-public class Character {
+public abstract class Character {
 
     private String name;
     protected ArrayList<String> lines;
 
     public Character(ArrayList<String> lines, String name){
         this.name = name;
-        lines = new ArrayList<String>();
+        this.lines = lines;
     }
-
 
     /**
      * This method will return the name of 
@@ -26,9 +27,12 @@ public class Character {
 
     @Override
     public String toString() {
-        // TODO: Finish
-        String rv = "";
-        return rv;
+
+        StringBuffer sb = new StringBuffer();
+        for(String piece : lines) {
+            sb.append(piece).append("\n");
+        }
+        return sb.toString();
+
     }
-    
 }
