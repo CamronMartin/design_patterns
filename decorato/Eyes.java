@@ -10,7 +10,7 @@ public class Eyes extends CharacterDecorator {
 
     @Override
     protected void integrateDecor(ArrayList<String> decor) {
-        decor.add("              |0| |0|");
+        decor.add("              |0| |0|\n");
     }
     
 }
