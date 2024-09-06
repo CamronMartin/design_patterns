@@ -10,7 +10,7 @@ public class PotatoeDriver {
 
 	/*
 	 * Original ascii drawing was found here:
-	 * https://www.asciiart.eu/movies/toy-story
+	 * https://www.asciiart.eu/movies/toy-1-story
 	 */
 	public PotatoeDriver() {
 		scanner = new Scanner(System.in);
