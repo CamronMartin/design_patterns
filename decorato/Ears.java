@@ -10,11 +10,21 @@ public class Ears extends CharacterDecorator {
 
     @Override
     protected void integrateDecor(ArrayList<String> decor) {
-        decor.add("        ..               ..\n");
-        decor.add("      .', :.           .: ,`.\n");
-        decor.add("     : (  :             :  ) ;\n");
-        decor.add("     '._.:               :._.'\n");
+        decor.set(3,"        ..               ..");
+        decor.set(4,"      .', :.           .: ,`.");
+        decor.set(5,"     : (  :             :  ) ;");
+        decor.set(6,"     '._.:               :._.'");
 
+    }
+
+    public String toString() {
+        ArrayList<String> decor = new ArrayList<>();
+        integrateDecor(decor);
+        StringBuffer result = new StringBuffer(super.toString());
+        for (String line : decor) {
+            result.append(line).append("\n");
+        }
+        return result.toString();
     }
     
 }

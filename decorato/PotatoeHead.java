@@ -12,6 +12,9 @@ public class PotatoeHead extends Character {
     
     private static ArrayList<String> loadHead() {
         ArrayList<String> lines = new ArrayList<>();
+        for(int i = 0; i < 13; ++i) {
+            lines.add("");
+        }
         lines.add("              ._____.");
         lines.add("           ./'..== ==.`\\.");
         lines.add("          :             :");

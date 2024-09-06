@@ -10,10 +10,21 @@ public class Hat extends CharacterDecorator{
 
     @Override
     protected void integrateDecor(ArrayList<String> decor) {
-        decor.add("              .-\"'\"-.");
-        decor.add("             |       |");
-        decor.add("           (`-._____.-')");
-        decor.add("            `-._____.-'");
+        decor.set(0,"              .-\"'\"-.");
+        decor.set(1,"             |       |");
+        decor.set(2,"           (`-._____.-')");
+        decor.set(3,"            `-._____.-'");
+    }
+
+    @Override
+    public String toString() {
+        ArrayList<String> decor = new ArrayList<>();
+        integrateDecor(decor);
+        StringBuffer result = new StringBuffer(super.toString());
+        for (String line : decor) {
+            result.append(line).append("\n");
+        }
+        return result.toString();
     }
     
     

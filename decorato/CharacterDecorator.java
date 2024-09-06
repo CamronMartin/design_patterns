@@ -11,10 +11,16 @@ public abstract class CharacterDecorator extends Character{
      * @param character
      */
     public CharacterDecorator(Character character) {
-        super(new ArrayList<>(), character.getName());
+        super(character.lines, character.getName());
         this.character = character;
+        integrateDecor(lines);
     }
 
     protected abstract void integrateDecor(ArrayList<String> decor);
+
+    @Override
+    public String toString() {
+        return character.toString();
+    }
     
 }
