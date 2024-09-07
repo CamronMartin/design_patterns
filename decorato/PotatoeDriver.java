@@ -1,6 +1,5 @@
 package decorato;
-import java.text.NumberFormat;
-import java.util.Locale;
+import decorato.Character;
 import java.util.Scanner;
 
 public class PotatoeDriver {
