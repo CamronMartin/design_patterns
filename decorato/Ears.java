@@ -17,14 +17,5 @@ public class Ears extends CharacterDecorator {
 
     }
 
-    public String toString() {
-        ArrayList<String> decor = new ArrayList<>();
-        integrateDecor(decor);
-        StringBuffer result = new StringBuffer(super.toString());
-        for (String line : decor) {
-            result.append(line).append("\n");
-        }
-        return result.toString();
-    }
     
 }

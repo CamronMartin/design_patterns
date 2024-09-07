@@ -13,7 +13,7 @@ public abstract class CharacterDecorator extends Character{
     public CharacterDecorator(Character character) {
         super(character.lines, character.getName());
         this.character = character;
-        integrateDecor(lines);
+        integrateDecor(character.lines);
     }
 
     protected abstract void integrateDecor(ArrayList<String> decor);
