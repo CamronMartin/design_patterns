@@ -1,5 +1,6 @@
 package decorato;
 
+import decorato.Character;
 import java.util.ArrayList;
 
 public abstract class CharacterDecorator extends Character{
