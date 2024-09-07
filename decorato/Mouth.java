@@ -10,9 +10,9 @@ public class Mouth extends CharacterDecorator{
 
     @Override
     protected void integrateDecor(ArrayList<String> decor) {
-        decor.set(10,"           .-\"`\"`-'\"`\"-. ");
-        decor.set(11,"           `~\":-...-:\"~` ");
-        decor.set(12,"               `---'");
+        decor.add(10,"           .-\"`\"`-'\"`\"-. ");
+        decor.add(11,"           `~\":-...-:\"~` ");
+        decor.add(12,"               `---'");
     }
 
 }

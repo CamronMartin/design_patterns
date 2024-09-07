@@ -10,10 +10,10 @@ public class Ears extends CharacterDecorator {
 
     @Override
     protected void integrateDecor(ArrayList<String> decor) {
-        decor.set(3,"        ..               ..");
-        decor.set(4,"      .', :.           .: ,`.");
-        decor.set(5,"     : (  :             :  ) ;");
-        decor.set(6,"     '._.:               :._.'");
+        decor.add(3,"        ..               ..");
+        decor.add(4,"      .', :.           .: ,`.");
+        decor.add(5,"     : (  :             :  ) ;");
+        decor.add(6,"     '._.:               :._.'");
 
     }
 
