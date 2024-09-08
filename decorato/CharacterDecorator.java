@@ -17,9 +17,7 @@ public abstract class CharacterDecorator extends Character{
         integrateDecor(character.lines);
     }
 
-    protected void integrateDecor(ArrayList<String> decor) {
-        
-    }
+    protected abstract void integrateDecor(ArrayList<String> decor);
 
     @Override
     public String toString() {

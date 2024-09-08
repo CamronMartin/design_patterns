@@ -8,27 +8,15 @@ public class PotatoeHead extends Character {
     private Character character;
 
     public PotatoeHead(String name) {
-        super(loadHead(), name);
+        super(FileReader.getLines("potatoe-head.txt"), name);
     }
 
-    
     private static ArrayList<String> loadHead() {
-        ArrayList<String> lines = new ArrayList<>();
-        lines.add("              ._____.");
-        lines.add("           ./'..== ==.`\\.");
-        lines.add("          :             :");
-        lines.add("         :               :");
-        lines.add("        /                 \\");
-        lines.add("      _.|                 |._");
-        lines.add("    .'.-|                 |-.`.");
-        lines.add("   //'  |                 |  `\\\\");
-        lines.add("  ||    |                 |    ||");
-        lines.add("  ||     \\.             ./     ||");
-        lines.add("  ||       '-._     _.-'       ||");
-        lines.add(" /  \\       _/ `~:~` \\_       /  \\");
-        lines.add("||||\\)   .-'    / \\    `-.   (/||||");
-        lines.add("\\|||    (`.___.')-(`.___.')    |||/");
-        lines.add(" '\"' jgs `-----'   `-----'     '\"'");
-        return lines;
+
+        ArrayList<String> potatoHead = FileReader.getLines("potatoe-head.txt");
+        for(int i = 0; i < potatoHead.size(); ++i) {
+            potatoHead.add(i, potatoHead.get(i));
+        }
+        return potatoHead;
     }
 }

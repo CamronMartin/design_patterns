@@ -10,10 +10,10 @@ public class Nose extends CharacterDecorator{
 
     @Override
     protected void integrateDecor(ArrayList<String> decor) {
-        decor.add(7,"                 _");
-        decor.add(8,"                / \\ ");
-        decor.add(9,"               (   )");
-        decor.add(10,"                `-' ");
+        decor.set(7,"                 _");
+        decor.set(8,"                / \\ ");
+        decor.set(9,"               (   )");
+        decor.set(10,"                `-' ");
     }
     
 }

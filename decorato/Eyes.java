@@ -7,20 +7,13 @@ public class Eyes extends CharacterDecorator {
 
     public Eyes(Character character) {
         super(character);
-<<<<<<< HEAD
-=======
-        integrateDecor(character.lines);
->>>>>>> 195eba7fb6d7495bd5d920ea217139383a4dc8ae
+        //integrateDecor(character.lines);
+        //character.lines.set(5,"              |0| |0|");
     }
 
     @Override
     protected void integrateDecor(ArrayList<String> decor) {
-<<<<<<< HEAD
-        decor.add(6,"              |0| |0|");
-=======
-        decor.set(6,"              |0| |0|");
-        
->>>>>>> 195eba7fb6d7495bd5d920ea217139383a4dc8ae
+        decor.set(5,"              |0| |0|");
     }
     
 }
