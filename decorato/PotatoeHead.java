@@ -17,7 +17,7 @@ public class PotatoeHead extends Character {
      * @param name
      */
     public PotatoeHead(String name) {
-        super(FileReader.getLines("text/potatoe-head.txt"), name);
+        super(FileReader.getLines("potatoe-head.txt"), name);
     }
 
     
