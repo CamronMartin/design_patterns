@@ -17,11 +17,13 @@ public abstract class CharacterDecorator extends Character{
         integrateDecor(character.lines);
     }
 
-    protected abstract void integrateDecor(ArrayList<String> decor);
+    protected void integrateDecor(ArrayList<String> decor) {
+        
+    }
 
     @Override
     public String toString() {
-        return character.toString();
+        return String.join("\n", this.lines);
     }
     
 }
