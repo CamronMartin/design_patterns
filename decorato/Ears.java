@@ -1,6 +1,6 @@
 package decorato;
 
-import java.util.ArrayList;
+import decorato.Character;
 
 public class Ears extends CharacterDecorator {
 
@@ -8,14 +8,6 @@ public class Ears extends CharacterDecorator {
         super(character);
     }
 
-    @Override
-    protected void integrateDecor(ArrayList<String> decor) {
-        decor.add(3,"        ..               ..");
-        decor.add(4,"      .', :.           .: ,`.");
-        decor.add(5,"     : (  :             :  ) ;");
-        decor.add(6,"     '._.:               :._.'");
-
-    }
 
     
 }
