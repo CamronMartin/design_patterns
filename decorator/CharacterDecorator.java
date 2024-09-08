@@ -2,7 +2,12 @@ package decorator;
 
 import java.util.ArrayList;
 
-
+/**
+ * This class will be responsible for merging all the lines seamlessly
+ * so the order does not matter.
+ * @author Camron Martin
+ * 
+ */
 public class CharacterDecorator extends Character{
 
     private Character character;
@@ -12,10 +17,8 @@ public class CharacterDecorator extends Character{
      * @param character The Character object to be decorated.
      */
     public CharacterDecorator(Character character) {
-        // Initialize the base Character class with the provided character's lines and name.
         super(character.lines, character.getName());
         this.character = character;
-        // Integrate the decoration with the provided character's lines.
         integrateDecor(character.lines);
     }
 
@@ -36,13 +39,10 @@ public class CharacterDecorator extends Character{
                 if (n >= linesLine.length()) {
                     blank += decorLine.charAt(n);
                 } else if (n >= decorLine.length()) {
-                    
                     blank += linesLine.charAt(n);
                 } else if (decorLine.charAt(n) != ' ') {
-                
                     blank += decorLine.charAt(n);
                 } else if (linesLine.length() > n) {
-                    
                     blank += linesLine.charAt(n);
                 }
             }

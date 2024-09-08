@@ -2,7 +2,6 @@ package decorator;
 
 import java.util.ArrayList;
 
-
 /**
  * This class will be responsible for adding ears
  * to the head
