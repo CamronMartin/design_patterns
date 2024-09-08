@@ -1,19 +1,23 @@
 package decorato;
 
+import decorato.Character;
 import java.util.ArrayList;
 
+/**
+ * This will be responsible for creating a graphically image
+ * of potatoe heads nose
+ * @author Camron Martin
+ */
 public class Nose extends CharacterDecorator{
 
+    /**
+     * This constructor will instansiate a nose on top
+     * of the potatoe head
+     * @param character
+     */
     public Nose(Character character) {
         super(character);
-    }
-
-    @Override
-    protected void integrateDecor(ArrayList<String> decor) {
-        decor.set(7,"                 _");
-        decor.set(8,"                / \\ ");
-        decor.set(9,"               (   )");
-        decor.set(10,"                `-' ");
+        ArrayList<String> nose = FileReader.getLines("text/nose");
     }
     
 }

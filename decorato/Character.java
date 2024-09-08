@@ -41,7 +41,7 @@ public class Character {
 
         
         StringBuffer sb = new StringBuffer();
-        sb.append("------------").append(this.getName()).append("------------");
+        //sb.append("------------").append(this.getName()).append("------------\n");
         for(String piece : lines) {
             sb.append(piece).append("\n");
         }
