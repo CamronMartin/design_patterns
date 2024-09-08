@@ -1,6 +1,6 @@
-package decorato;
-import decorato.Character;
+package decorator;
 import java.util.Scanner;
+
 
 public class PotatoeDriver {
     private String[] options = { "Eyes", "Nose", "Mouth", "Ears", "Hat", "Quit" };

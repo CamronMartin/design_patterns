@@ -1,7 +1,7 @@
-package decorato;
+package decorator;
 
-import decorato.Character;
 import java.util.ArrayList;
+
 
 public class CharacterDecorator extends Character{
 

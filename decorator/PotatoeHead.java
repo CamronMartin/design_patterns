@@ -1,6 +1,5 @@
-package decorato;
+package decorator;
 
-import decorato.Character;
 
 /**
  * This will be a graphical representation
@@ -17,7 +16,7 @@ public class PotatoeHead extends Character {
      * @param name
      */
     public PotatoeHead(String name) {
-        super(FileReader.getLines("text/potatoe-head.txt"), name);
+        super(FileReader.getLines("decorator/text/potatoe-head.txt"), name);
     }
 
     

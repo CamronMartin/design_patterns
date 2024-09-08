@@ -1,7 +1,7 @@
-package decorato;
+package decorator;
 
-import decorato.Character;
 import java.util.ArrayList;
+
 
 /**
  * This class will graphically show the eyes for the potatoe head
@@ -17,7 +17,7 @@ public class Eyes extends CharacterDecorator {
      */
     public Eyes(Character character) {
         super(character);
-        ArrayList<String> eyes = FileReader.getLines("text/eyes.txt");
+        ArrayList<String> eyes = FileReader.getLines("decorator/text/eyes.txt");
         integrateDecor(eyes);
     }
 

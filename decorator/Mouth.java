@@ -1,7 +1,7 @@
-package decorato;
+package decorator;
 
-import decorato.Character;
 import java.util.ArrayList;
+
 
 /**
  * This class will graphically show the mouth for the potatoe character
@@ -16,7 +16,7 @@ public class Mouth extends CharacterDecorator{
      */
     public Mouth(Character character) {
         super(character);
-        ArrayList<String> mouth = FileReader.getLines("text/mouth.txt");
+        ArrayList<String> mouth = FileReader.getLines("decorator/text/mouth.txt");
         integrateDecor(mouth);
     }
 

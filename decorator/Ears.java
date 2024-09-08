@@ -1,7 +1,7 @@
-package decorato;
+package decorator;
 
-import decorato.Character;
 import java.util.ArrayList;
+
 
 /**
  * This class will be responsible for adding ears
@@ -16,7 +16,7 @@ public class Ears extends CharacterDecorator {
      */
     public Ears(Character character) {
         super(character);
-        ArrayList<String> ears = FileReader.getLines("text/ears.txt");
+        ArrayList<String> ears = FileReader.getLines("decorator/text/ears.txt");
         integrateDecor(ears);
     }
 

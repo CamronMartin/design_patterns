@@ -1,7 +1,7 @@
-package decorato;
+package decorator;
 
-import decorato.Character;
 import java.util.ArrayList;
+
 
 /**
  * This will be responsible for creating a graphically image
@@ -17,7 +17,8 @@ public class Nose extends CharacterDecorator{
      */
     public Nose(Character character) {
         super(character);
-        ArrayList<String> nose = FileReader.getLines("text/nose");
+        ArrayList<String> nose = FileReader.getLines("decorator/text/nose");
+        integrateDecor(nose);
     }
     
 }
