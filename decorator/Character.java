@@ -40,6 +40,7 @@ public class Character {
     public String toString() {
 
         
+        System.out.println("--------- " + this.getName() + " ---------");
         StringBuffer sb = new StringBuffer();
         for(String piece : lines) {
             sb.append(piece).append("\n");

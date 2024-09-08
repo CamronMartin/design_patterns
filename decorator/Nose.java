@@ -17,7 +17,7 @@ public class Nose extends CharacterDecorator{
      */
     public Nose(Character character) {
         super(character);
-        ArrayList<String> nose = FileReader.getLines("decorator/text/nose");
+        ArrayList<String> nose = FileReader.getLines("decorator/text/nose.txt");
         integrateDecor(nose);
     }
     
