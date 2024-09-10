@@ -31,9 +31,8 @@ public class CharacterDecorator extends Character{
         for (int i = 0; i < lines.size(); i++) {
             String blank = "";
             String decorLine = decor.get(i);
-            String linesLine = lines.get(i);
-
-            int maxLength = Math.max(decorLine.length(), linesLine.length());
+            String linesLine = lines.get(i); 
+           int maxLength = Math.max(decorLine.length(), linesLine.length());
 
             for (int n = 0; n < maxLength; n++) {
                 if (n >= linesLine.length()) {
