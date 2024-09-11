@@ -1,29 +1,40 @@
 package state;
 
-public class Medium implements State{
+import java.util.Random;
+
+public class Medium implements State {
+
+  private ArithemeticGame game;
 
     @Override
     public int getNum() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getNum'");
+        Random rnd = new Random();
+        return rnd.nextInt(25) + 1;
     }
 
     @Override
     public Operation getOperation() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getOperation'");
+
+        Random rnd = new Random();
+        int op = rnd.nextInt(3) + 1;
+
+        if(op == 1) {
+          return Operation.PLUS;
+        } else if (op == 2) {
+          return Operation.PLUS;
+        } else {
+          return Operation.MULTIPLY;
+        }
     }
 
     @Override
     public void increaseDifficulty() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'increaseDifficulty'");
+        game.setState(game.getMediumState()); 
     }
 
     @Override
     public void decreaseDifficulty() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'decreaseDifficulty'");
+        game.setState(game.getEasyState());
     }
     
 }

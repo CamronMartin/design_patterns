@@ -13,13 +13,13 @@ public class Easy implements State {
   @Override
   public int getNum() {
     Random rnd = new Random();
-    return rnd.nextInt(11);
+    return rnd.nextInt(10) + 1;
   }
 
   @Override
   public Operation getOperation() {
     Random rnd = new Random();
-    int op = rnd.nextInt(2);
+    int op = rnd.nextInt(2) + 1;
     if(op == 2) {
       return Operation.PLUS;
     } 
