@@ -1,14 +1,20 @@
 package state;
 
+/**
+ * This class will be responsible for creating questions
+ * and setting the state of the game.
+ * @author Camron Martin
+ */
 public class ArithemeticGame {
 
     private State easyState;
     private State mediumState;
     private State hardState;
     private State state;
-    private int score = 0;
+    private int score;
 
     public ArithemeticGame() {
+        this.score = 0;
         this.easyState = new Easy(this);
         this.mediumState = new Medium(this);
         this.hardState = new Hard(this);
@@ -24,11 +30,19 @@ public class ArithemeticGame {
 
     public void increaseScore() {
         this.score++;
+        if(this.score >= 3) {
+          this.state.increaseDifficulty();
+          this.score = 0;
+        }
     }
 
     public void decreaseScore() {
         this.score--;
-    }
+        if(this.score <= -3) {
+          this.state.decreaseDifficulty();  
+          this.score = 0;
+        }
+  }
 
     public void setState(State state) {
         this.state = state;

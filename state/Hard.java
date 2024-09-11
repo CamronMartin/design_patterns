@@ -34,12 +34,13 @@ public class Hard implements State {
 
     @Override
     public void increaseDifficulty() {
-        this.game.setState(game.getHardState());
+        System.out.println("You show no pitfalls in your intelect. ");
     }
 
     @Override
     public void decreaseDifficulty() {
         this.game.setState(game.getMediumState());
+        System.out.println("Decreasing difficulty to medium. ");
     }
     
 }

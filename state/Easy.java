@@ -29,11 +29,12 @@ public class Easy implements State {
   @Override
   public void increaseDifficulty() {
     game.setState(game.getMediumState());
+    System.out.println("Advancing to medium difficulty.");
   }
 
   @Override
   public void decreaseDifficulty() {
-    
+      System.out.println("Ummm you should study more."); 
   }
 
 }

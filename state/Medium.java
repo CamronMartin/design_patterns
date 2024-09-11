@@ -33,12 +33,14 @@ public class Medium implements State {
 
     @Override
     public void increaseDifficulty() {
-        game.setState(game.getMediumState()); 
+        game.setState(game.getHardState());
+        System.out.println("Increasing difficulty to hard. ");
     }
 
     @Override
     public void decreaseDifficulty() {
         game.setState(game.getEasyState());
+        System.out.println("Decreasing difficulty to easy. ");
     }
     
 }
