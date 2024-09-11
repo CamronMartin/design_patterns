@@ -6,6 +6,10 @@ public class Medium implements State {
 
   private ArithemeticGame game;
 
+    public Medium(ArithemeticGame game) {
+        this.game = game;
+    }
+
     @Override
     public int getNum() {
         Random rnd = new Random();

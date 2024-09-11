@@ -8,8 +8,18 @@ public class ArithemeticGame {
     private State state;
     private int score;
 
+    public ArithemeticGame() {
+        this.easyState = new Easy(this);
+        this.mediumState = new Medium(this);
+        this.hardState = new Hard(this);
+        
+        this.state = this.easyState;
+        this.setState(state);
+    }
+
     public Question getQuestion() {
-        return new Question(state.getNum(), state.getNum(), state.getOperation());
+        Question question = new Question(this.state.getNum(), this.state.getNum(), this.state.getOperation());
+        return question;
     }
 
     public void increaseScore() {

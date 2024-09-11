@@ -6,6 +6,10 @@ public class Hard implements State {
 
     private ArithemeticGame game;
 
+    public Hard(ArithemeticGame game) {
+        this.game = game;
+    }
+
     @Override
     public int getNum() {
         Random rnd = new Random();
