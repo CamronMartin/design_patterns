@@ -19,8 +19,8 @@ public class Easy implements State {
   @Override
   public Operation getOperation() {
     Random rnd = new Random();
-    int op = rnd.nextInt(2) + 1;
-    if(op == 2) {
+    int op = rnd.nextInt(2);
+    if(op == 1) {
       return Operation.PLUS;
     } 
     return Operation.MINUS;

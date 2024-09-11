@@ -1,4 +1,5 @@
 package state;
+
 import java.util.Scanner;
 public class GameDriver {
     private Scanner reader;
@@ -25,6 +26,7 @@ public class GameDriver {
                 System.out.println("Sorry Invalid command");
             }
         }
+
     }
 
     public void playRound() {

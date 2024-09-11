@@ -6,7 +6,7 @@ public class ArithemeticGame {
     private State mediumState;
     private State hardState;
     private State state;
-    private int score;
+    private int score = 0;
 
     public ArithemeticGame() {
         this.easyState = new Easy(this);
@@ -14,7 +14,7 @@ public class ArithemeticGame {
         this.hardState = new Hard(this);
         
         this.state = this.easyState;
-        this.setState(state);
+        System.out.println("Initial state set too " + this.state);
     }
 
     public Question getQuestion() {
@@ -45,10 +45,4 @@ public class ArithemeticGame {
     public State getHardState() {
         return this.hardState;
     }
-
-
-
-
-
-
 }

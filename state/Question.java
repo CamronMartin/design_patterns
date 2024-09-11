@@ -6,7 +6,27 @@ public class Question {
     private int answer;
 
     public Question(int num1, int num2, Operation operation) {
-        this.question = num1 + operation.label + num2; 
+        this.question = num1 + " " + operation.label + " " + num2;
+        switch (operation) {
+            case PLUS:
+                this.answer = num1 + num2;
+                break;
+            case MINUS:
+                this.answer = num1 - num2;
+                break;
+            case MULTIPLY:
+                this.answer = num1 * num2;
+                break;
+            case DIVIDE:
+                if (num2 != 0) {
+                    this.answer = num1 / num2;  // Integer division
+                } else {
+                    System.out.println("Cannot divide by 0");
+                }
+                break;
+            default:
+                System.out.println("Unknown operation: " + operation);
+        }
     }
 
     public int getAnswer() {
