@@ -1,10 +1,22 @@
 package state;
 
+/**
+ * This class will be responsible for creating questions, checing the correct answer, 
+ * and increasing/decreasing the score.
+ * @author Camron Martin
+ */
 public class Question {
 
     private String question;
     private int answer;
-
+    
+    /**
+     * This constructor will generate a new question, and also generate 
+     * the correct answer for the question.
+     * @param num1 a random number 
+     * @param num2 a random number 
+     * @param operation a random operation
+     */
     public Question(int num1, int num2, Operation operation) {
         this.question = num1 + " " + operation.label + " " + num2;
         switch (operation) {
@@ -29,14 +41,27 @@ public class Question {
         }
     }
 
+    /**
+     * This method will return the correct answer.
+     * @return answer 
+     */
     public int getAnswer() {
         return this.answer;
     }
 
+    /**
+     * This method will check whether the user's answer 
+     * is correct or not.
+     * @param answer users answer 
+     */
     public boolean isCorrect(int answer) {
         return this.answer == answer;
     }
 
+    /**
+     * This method will print the question to the string.
+     * @return sb the question
+     */
     @Override
     public String toString() {
         
