@@ -22,8 +22,12 @@ public class TriviaGame {
   }
 
   public Question getQuestion() {
+    this.questions = new ArrayList<>();
+    for(int i = 0; i < DataLoader.getTriviaQuestions().size(); ++i) {
+      this.questions.add(DataLoader.getTriviaQuestions().get(i));
+    }
     rand = new Random();
-    int pos = rand.nextInt(questions.size() - 1);
+    int pos = rand.nextInt(questions.size() + 1);
     return this.questions.get(pos);
   }
 
@@ -32,15 +36,17 @@ public class TriviaGame {
   }
 
   public void winRound() {
-
+    this.score++;
   }
 
   public void loseRound() {
-
+    this.score--;
   }
 
   public String getScores() {
-
+    StringBuilder sb = new StringBuilder();
+    sb.append(this.score);
+    return sb.toString();
   }
 
 
