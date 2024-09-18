@@ -22,12 +22,14 @@ public class TriviaGame {
   }
 
   public Question getQuestion() {
+
+    // TODO: Implement way for questions to not repeat
     this.questions = new ArrayList<>();
     for(int i = 0; i < DataLoader.getTriviaQuestions().size(); ++i) {
       this.questions.add(DataLoader.getTriviaQuestions().get(i));
     }
     rand = new Random();
-    int pos = rand.nextInt(questions.size() + 1);
+    int pos = rand.nextInt(questions.size());
     return this.questions.get(pos);
   }
 

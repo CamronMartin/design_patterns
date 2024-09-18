@@ -9,32 +9,31 @@ public class Question {
 
   public Question(String question, int correctAnswer, String[] answers) {
     this.question = question;
-    this.correctAnswer = correctAnswer;
-    
-    System.out.println("answers size = " + answers.length);
+    this.correctAnswer = correctAnswer; 
     this.answers = new ArrayList<>();
     
     for(int i = 0; i < answers.length; ++i) {
       this.answers.add(answers[i]);
-      System.out.println("This.answers i=" + i + " = " + this.answers.get(i));
     } 
     
   }
 
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append(this.question);
-    // TODO: Figure out how to print the four answer choices
+    sb.append(this.question).append("\n");
+    for(int i = 0; i < 4; ++i) {
+      sb.append( (i+1) + ". ").append(answers.get(i)).append("\n");
+    }
     return sb.toString();
   }
 
   public boolean isCorrect(int userAnswer) {
-    return userAnswer == correctAnswer;
+    return userAnswer == correctAnswer + 1;
   }
 
   public String getCorrectAnswer() {
     StringBuilder sb = new StringBuilder();
-    sb.append(this.correctAnswer);
+    sb.append(this.correctAnswer + 1);
     return sb.toString();
   }
 }
