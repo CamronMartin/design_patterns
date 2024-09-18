@@ -46,6 +46,8 @@ public class TriviaGame {
   public Question getQuestion() {
     if(!hasMoreQuestions()) {
       System.out.println("No more questions available.");
+      System.exit(-1); 
+      return null; 
     }
     numGames++;
     int pos = rand.nextInt(questions.size());
