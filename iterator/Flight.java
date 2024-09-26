@@ -1,5 +1,6 @@
 package iterator;
 import java.time.LocalTime;
+import java.util.ArrayList;
 
 public class Flight {
 
@@ -34,6 +35,7 @@ public class Flight {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    //sb.append(this.from + " to " + this.to + " " + this.startTime + " - " + this.endTime + " (" + (startTime.));
+    ArrayList<Flight> flights = FlightLoader.getFlights();
+    sb.append(this.from + " to " + this.to + " " + this.startTime + " - " + this.endTime + " (" + (endTime.minus(startTime)) + ") ");
   }
 } 

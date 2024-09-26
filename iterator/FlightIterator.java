@@ -15,10 +15,13 @@ public class FlightIterator implements Iterator {
     this.from = from;
     this.to = to;
   }
-  public boolean hasNext() {
-    return flights.get(position) != flights.get(position++);
+  public boolean hasNext() { 
+    return flights.get(position) != null && position < flights.size();
   }
   public Flight next() {
+    if(!hasNext()){
+      return null;
+    }
     return flights.get(position++);
   }
 }
