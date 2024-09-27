@@ -18,6 +18,7 @@ public class Flight {
     this.startTime = startTime;
     this.endTime = endTime;
     this.numTransfers = numTransfers;
+   
   }
 
   public Airport getFrom() {
@@ -29,13 +30,32 @@ public class Flight {
   }
 
   public boolean sameLoc(Airport from, Airport to) {
-    return from == to;
+    return this.from.equals(from) && this.from.equals(to);
   }
 
   @Override
   public String toString() {
+
     StringBuilder sb = new StringBuilder();
-    ArrayList<Flight> flights = FlightLoader.getFlights();
-    sb.append(this.from + " to " + this.to + " " + this.startTime + " - " + this.endTime + " (" + (endTime.minus(startTime)) + ") ");
+
+    java.time.Duration duration = java.time.Duration.between(startTime, endTime);
+
+    double hours = duration.toHours();
+    double mins = duration.toMinutes() % 60;
+
+    sb.append(this.from + " to " + this.to + " ");
+    sb.append(this.startTime + " - " + this.endTime + " ");
+    sb.append("(" + hours + "h " + mins + "m) ");
+    
+    // TODO: Implement method 
+    if (this.numTransfers == 0) {
+        sb.append("Direct Flight");
+    } else if (this.numTransfers == 1) {
+        sb.append("1 Stopover");
+    } else {
+        sb.append(this.numTransfers + " Transfers");
+    }
+
+    return sb.toString(); 
   }
 } 

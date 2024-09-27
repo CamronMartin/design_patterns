@@ -3,6 +3,7 @@ import java.util.ArrayList;
 
 
 public class Airline {
+
   private String title;
   private ArrayList<Flight> flights;
 
@@ -16,11 +17,11 @@ public class Airline {
   }
 
   public FlightIterator createIterator(String fromCode, String toCode) {
-    // TODO: Implement this method
-   
+
     // Get String fromCode to Airport fromCode but how??
     Airport fromA = Airport.valueOf(fromCode); 
     Airport toA = Airport.valueOf(toCode);
-    return new FlightIterator(flights, fromA, toA);
+    return new FlightIterator(FlightLoader.getFlights(), fromA, toA);
   }
+
 } 

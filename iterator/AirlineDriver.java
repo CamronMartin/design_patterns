@@ -21,13 +21,14 @@ public class AirlineDriver {
         System.out.println();
 
         if(flights == null){
+            reader.close();
             return;
         }
-
 
         while(flights.hasNext()){
             System.out.println("  " + flights.next());
         }
+        reader.close();
     }
 
     public static void main(String[] args){
